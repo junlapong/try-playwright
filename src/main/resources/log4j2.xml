@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<!--
+				%d{HH:mm:ss} %-5p [%t] %c.%M(%F:%L) - %m%n
+				%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c.%M(%F:%L) - %m%n
+				%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{2}.%M() - %m%n
+				%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1.} - %m%n
+			-->
+			<PatternLayout pattern="%d{HH:mm:ss} %-5p %c{1.}.%M() - %m%n" />
+		</Console>		
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.example" additivity="false" level="trace">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Root additivity="false" level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
