@@ -1,4 +1,4 @@
-# try-playrigt
+# try-playwright
 
 https://playwright.dev/java/
 
